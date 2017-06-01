@@ -2,24 +2,23 @@
 var modal = (function(){
     function init(){
         var btn = document.querySelectorAll('.modal-open');
-        btn.forEach(function(elem, index){
-            elem.addEventListener('click', function(event){
+        for(var i = 0; i < btn.length; i++){
+            btn[i].addEventListener('click', function(event){
                 openModal(this);
             });
-        });
-
+        }
         var close = document.querySelectorAll('.modal-box-close');
-        close.forEach(function(elem, index){
-            elem.addEventListener('click', function(event){
+        for(var i = 0; i < close.length; i++){
+            close[i].addEventListener('click', function(event){
                 closeModal(this);
             });
-        });
+        };
     }
 
     function openModal(target){
         console.log('open');
-        var target = element.getAttribute('data-target'),
-            modal = document.getElementById(target);
+        var elem = target.getAttribute('data-target'),
+            modal = document.getElementById(elem);
         modal.style.display = 'block';
         modal.classList.add('active');
     }
