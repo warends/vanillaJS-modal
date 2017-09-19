@@ -1,5 +1,5 @@
 
-var modal = (function(){
+var modal = (() => {
     function init(){
         var btn = document.querySelectorAll('.modal-open');
         for(var i = 0; i < btn.length; i++){

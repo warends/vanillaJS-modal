@@ -1,6 +1,9 @@
 .modal-container {
     display: none;
 }
+.modal-container.active{
+    display: block;
+}
 .modal-box-overlay {
   position:fixed;
   z-index:9998;
